@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hochzeitsquiz</title>
+    <style>
+      body {
+        font-family: "comic sans ms";
+        padding: 50px;
+      }
+
+      .colorful {
+        background-image: linear-gradient(90deg, blue, red, pink, purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+    </style>
+    <script>
+      function submit() {
+        console.log("test");
+        const input = document.querySelector(".inputField");
+        console.log(input.value);
+        if (input.value.toLowerCase() == "hapitbetrs3mnfptw") {
+          input.classList.remove("red");
+          input.classList.add("green");
+        } else {
+          input.classList.remove("green");
+          input.classList.add("red");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <marquee><h1 class="colorful">Quizzzz für Sääry und Behmer</h1></marquee>
+    <p>
+      Liebe Sääry, lieber Behmer, ihr habt euch Geld zur Hochzeit gewünscht.
+      Doch Papier in einen Umschlag stecken - das war leider uns etwas zu lame
+      und zu analog: ihr müsst schon etwas in Erinnerungen schwelgen, um den
+      Jackpot zu knacken. Nehmt dafür einfach die handgeschriebenen Zettel,
+      kramt ein bisschen in eurem Gedächtnis, recherchiert und gebt dann unten
+      das Lösungswort ein. (Das Lösungswort besteht pro Frage aus einem
+      Buchstaben, der auf den Zetteln jeweils herzig gekennzeichnet ist.)
+    </p>
+
+    <h2>Lösungswort</h2>
+
+    <input class="inputField" />
+
+    <button onclick="submit()">abschicken</button>
+
+    <p>Euere Caro und euer MoriPori</p>
+  </body>
+</html>
