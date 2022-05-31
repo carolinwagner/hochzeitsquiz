@@ -25,19 +25,29 @@
         background-color: green;
       }
     </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <script>
       function submit() {
-        console.log("test");
         const input = document.querySelector(".inputField");
         console.log(input.value);
         if (input.value.toLowerCase() == "hapitbetrs3mnfptw") {
           input.classList.remove("red");
           input.classList.add("green");
+          emailjs.send("uberspace", "template_3485mfg", {
+            message: "Das Hochzeitsquiz wurde gelöst",
+          });
+          console.log("Sent Mail");
         } else {
           input.classList.remove("green");
           input.classList.add("red");
         }
       }
+      (function () {
+        emailjs.init("rIS5irfQVm2cAnWso");
+      })();
     </script>
   </head>
   <body>
